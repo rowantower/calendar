@@ -1,0 +1,230 @@
+body {
+    margin: 0;
+}
+
+.content {
+    width: 894px;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+
+.header {
+    background: #f4f4f4;
+    width: 100%;
+    min-width: 894px;
+    min-height: 100px;
+    font-family: sans-serif;
+    box-shadow: 0 0 10px #bbb;
+}
+
+.header .inputs {
+    position: relative;
+    top: 55px;
+    width: 894px;
+    margin: 0 auto;
+}
+
+.header-button {
+    background: #0271c7;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 0 0 1px black;
+    border: 1px solid #0271c7;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px gray;
+    padding: 4px 10px;
+}
+
+.header-button:hover {
+    cursor: pointer;
+}
+
+/*Style for both active state of "header-button" and for "header-button pressed"*/
+.header-button:active,
+.header-button.pressed {
+    background-color: #005ba6;
+    box-shadow: inset 0 3px 5px #002e53;
+    color: #c1d0e3;
+}
+
+.header-search {
+    float: right;
+    min-width: 220px;
+    padding: 4px 10px;
+    border: 1px solid #DDD;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 2px gray;
+}
+
+.search-icon {
+    display: inline;
+    float: right;
+    margin-top: 4px;
+    margin-right: 4px;
+}
+
+.header-text {
+    min-width: 220px;
+    padding: 4px 10px;
+    border: 1px solid #DDD;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 2px gray;
+    clear: both;
+    margin-bottom: 10px;
+}
+
+.close-button {
+    float: right;
+    background: #ffffff;
+    border: 1px solid transparent;
+}
+
+.close-button:hover {
+    border: 1px solid #dfdfdf;
+    box-shadow: 0 0 3px gray;
+}
+
+.close-button:active {
+    border: 1px solid #dfdfdf;
+    box-shadow: inset 0 1px 3px gray;
+}
+
+#add-dialog-popup {
+    background-color: #fff;
+    height: 95px;
+    position: absolute;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    width: 270px;
+    top: 40px;
+    box-shadow: 0 0 10px gray;
+    float: left;
+    z-index: 100;
+    padding-left: 15px;
+}
+
+#add-dialog-popup:after {
+    content: ' ';
+    height: 0;
+    position: absolute;
+    width: 0;
+    border: 10px solid transparent;
+    border-bottom-color: #fff;
+    top: -20px;
+    left: 20px;
+    float: left;
+}
+
+.action-button{
+    font-size: 11px;
+    border: 1px solid #b7b7b7;
+    border-radius: 4px;
+    /* Chrome 10+, Safari 5.1+ */
+    background: -webkit-linear-gradient(top, #ffffff, #ececec);
+    background: -o-linear-gradient(top, #ffffff, #ececec); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff, #ececec); /* IE10 */
+    background: linear-gradient(top, #ffffff, #ececec); /* CSS3 */
+}
+.action-button:active{
+    background: -webkit-linear-gradient(top, #ececec, #ffffff);
+    background: -o-linear-gradient(top, #ececec, #ffffff); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ececec, #ffffff); /* IE10 */
+    background: linear-gradient(top, #ececec, #ffffff); /* CSS3 */
+}
+
+.hidden {
+    display: none;
+}
+
+.clear {
+    height: 1em;
+    display: inline-block
+}
+
+#selected-date {
+    display: inline;
+    font-family: segoe, sans-serif;
+    position: relative;
+    top: 4px;
+}
+
+.month-selector {
+    margin: 10px 0;
+}
+
+.month-selector-button {
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+    box-shadow: 0 0 1px gray;
+    border-radius: 4px;
+    font-size: 10px;
+    color: #666;
+}
+
+.month-selector-button:active {
+    box-shadow: inset 0 1px 3px gray;
+}
+
+.calendar {
+    min-height: 700px;
+    word-spacing: -0.30em;
+    font-size: 10px;
+    font-family: sans-serif;
+    color: #666;
+}
+
+.calendar-item {
+    margin: 0 auto -5px auto;
+    display: inline-block;
+    border-left: 1px solid #e2e2e2;
+    border-top: 1px solid #e2e2e2;
+    width: 124px;
+    height: 124px;
+    word-spacing: 0;
+}
+
+.calendar-item.row5 {
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.calendar-item.column7 {
+    border-right: 1px solid #e2e2e2;
+}
+
+.calendar-item.filled {
+    background: #c1e4ff;
+    width: 124px;
+    height: 120px;
+}
+.calendar-item.today{
+    background-color: #f4f4f4;
+}
+
+.calendar-item.today .date {
+    color: #666;
+    font-weight: bold;
+}
+
+.calendar-item div {
+    margin: 3px;
+    font-size: 11px;
+}
+
+.date {
+    color: #999;
+}
+
+.event {
+    display: inline;
+    position: relative;
+    float: left;
+    font-weight: bold;
+}
+
+.event-text {
+    display: inline;
+    position: relative;
+    float: left;
+    clear: both;
+}

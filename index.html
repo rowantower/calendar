@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Календарь</title>
+    <link href="Styles.css" type="text/css" rel="stylesheet"/>
+    <meta charset="utf-8"/>
+</head>
+<body>
+<div class="header">
+    <div class="inputs">
+        <input type="button" value="Добавить" class="header-button" onclick="headerButtonClick(event)"/>
+        <input type="button" value="Обновить" class="header-button" onclick="reload()"/>
+        <input type="search" class="header-search" placeholder="Событие, дата или участник"/>
+        <img src="search1.png" class="search-icon">
+
+        <div id="add-dialog-popup" class="hidden">
+            <div class="clear"> </div>
+            <input type="button" class="close-button" value="x"/>
+            <input type="text" class="header-text" placeholder="5 марта, 14:00, День рождения">
+            <div>
+                <input type="button" class="action-button" value="Создать">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="month-selector">
+        <input type="button" value="◀" class="month-selector-button" onclick="selectPreviousMonth()"/>
+
+        <div id="selected-date">Март 2013</div>
+        <input type="button" value="▶" class="month-selector-button" onclick="selectNextMonth()"/>
+        <input type="button" value="Сегодня" class="month-selector-button" onclick="selectCurrentMonth()"/>
+    </div>
+    <div class="calendar">
+        <div class="calendar-item row1 column1">
+            <div class="date">Понедельник, 25</div>
+        </div>
+        <div class="calendar-item row1 column2">
+            <div class="date">Вторник, 26</div>
+        </div>
+        <div class="calendar-item row1 column3">
+            <div class="date">Среда, 27</div>
+        </div>
+        <div class="calendar-item row1 column4">
+            <div class="date">Четверг, 28</div>
+        </div>
+        <div class="calendar-item row1 column5">
+            <div class="date">Пятница, 1</div>
+        </div>
+        <div class="calendar-item row1 column6 today">
+            <div class="date">Суббота, 2</div>
+        </div>
+        <div class="calendar-item row1 column7">
+            <div class="date">Воскресенье, 3</div>
+        </div>
+        <div class="calendar-item row2 column1">
+            <div class="date">4</div>
+        </div>
+        <div class="calendar-item row2 column2">
+            <div class="date">5</div>
+        </div>
+        <div class="calendar-item row2 column3">
+            <div class="date">6</div>
+        </div>
+        <div class="calendar-item row2 column4">
+            <div class="date">7</div>
+        </div>
+        <div class="calendar-item row2 column5">
+            <div class="date">8</div>
+        </div>
+        <div class="calendar-item row2 column6 filled">
+            <div class="date">9</div><div class="event">Напиться!</div>
+            <div class="event-text">Витя Костин, Петр Михайлов</div>
+        </div>
+        <div class="calendar-item row2 column7">
+            <div class="date">10</div>
+        </div>
+        <div class="calendar-item row3 column1">
+            <div class="date">11</div>
+        </div>
+        <div class="calendar-item row3 column2">
+            <div class="date">12</div>
+        </div>
+        <div class="calendar-item row3 column3">
+            <div class="date">13</div>
+        </div>
+        <div class="calendar-item row3 column4">
+            <div class="date">14</div>
+        </div>
+        <div class="calendar-item row3 column5">
+            <div class="date">15</div>
+        </div>
+        <div class="calendar-item row3 column6">
+            <div class="date">16</div>
+        </div>
+        <div class="calendar-item row3 column7">
+            <div class="date">17</div>
+        </div>
+        <div class="calendar-item row4 column1">
+            <div class="date">18</div>
+        </div>
+        <div class="calendar-item row4 column2">
+            <div class="date">19</div>
+        </div>
+        <div class="calendar-item row4 column3">
+            <div class="date">20</div>
+        </div>
+        <div class="calendar-item row4 column4">
+            <div class="date">21</div>
+        </div>
+        <div class="calendar-item row4 column5 filled">
+            <div class="date">22</div>
+            <div class="event">ДР!</div>
+            <div class="event-text">Дима Молодцов</div>
+        </div>
+        <div class="calendar-item row4 column6">
+            <div class="date">23</div>
+        </div>
+        <div class="calendar-item row4 column7">
+            <div class="date">24</div>
+        </div>
+        <div class="calendar-item row5 column1">
+            <div class="date">25</div>
+        </div>
+        <div class="calendar-item row5 column2">
+            <div class="date">26</div>
+        </div>
+        <div class="calendar-item row5 column3">
+            <div class="date">27</div>
+        </div>
+        <div class="calendar-item row5 column4">
+            <div class="date">28</div>
+        </div>
+        <div class="calendar-item row5 column5">
+            <div class="date">29</div>
+        </div>
+        <div class="calendar-item row5 column6">
+            <div class="date">30</div>
+        </div>
+        <div class="calendar-item row5 column7">
+            <div class="date">31</div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="Scripts.js"></script>
+</body>
+</html>
